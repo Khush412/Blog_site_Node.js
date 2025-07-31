@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>THE DAILY DAIRY – Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=EB+Garamond:wght@500&display=swap">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <%- include('header', { activePage: 'home' }) %>
+
+  <main class="homepage-main">
+    <!-- Hero: organic, semi-transparent card, luxury typography -->
+    <section class="hero-section">
+      <h1>The Art of Dairy, Daily.</h1>
+      <p>
+        Welcome to <strong>THE DAILY DAIRY</strong> – where every drop is a story.<br>
+        Explore featured insights, latest trends, and what’s buzzing in the world of dairy.
+      </p>
+      <a href="/blog" class="cta-btn">Explore the Blog</a>
+    </section>
+
+    <!-- Carousel: Featured ("Famous") Posts -->
+    <section class="carousel-section">
+      <h2 class="section-headline">Famous Posts</h2>
+      <div class="carousel">
+        <!-- Populate with your best stories, replace images/titles -->
+        <div class="carousel-slide">
+          <img src="/images/image1.png" alt="Famous Post 1">
+          <div class="carousel-caption">
+            <h3>Enabling customers to deliver production-ready AI agents at scale</h3>
+            <p>Today, I’m excited to share how we’re bringing this vision to life with new capabilities that address the fundamental aspects of building and deploying agents at scale. These innovations will help you move beyond experiments to production-ready agent systems that can be trusted with your most critical business processes.</p>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <img src="/images/image2.png" alt="Famous Post 2">
+          <div class="carousel-caption">
+            <h3>Navigating Conflicting Decisions in Your Cloud Migration and Modernization Journey</h3>
+            <p>When one enterprise moved its aging systems to the cloud, the CTO faced a tough choice: rehost apps (lift and shift applications as-is) for speed or refactor (modify applications) for long‑term cloud benefits. Rehosting meant getting there fast but sacrificing efficiency.</p>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <img src="/images/image3.png" alt="Famous Post 2">
+          <div class="carousel-caption">
+            <h3>Introducing Amazon Bedrock AgentCore: Securely deploy and operate AI agents at any scale (preview)</h3>
+            <p>Amazon Bedrock AgentCore enables rapid deployment and scaling of AI agents with enterprise-grade security. It provides memory management, identity controls, and tool integration—streamlining development while working with any open-source framework and foundation model.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest + Trending -->
+    <section class="homepage-section">
+      <h2 class="section-headline">Latest Posts 2025</h2>
+      <div class="blog-list latest-posts">
+        <div class="blog-card">
+          <img src="/images/image4.png" alt="Latest 1">
+          <div class="blog-card-details">
+            <h3>Sweet roots, big dreams and a whole lot of frosting: The Deliure Story</h3>
+            <p>Growing up in the bylanes of Mumbai, brothers Mohammed Selia and Faisal Sunesara were drawn to the comforting chaos of their local Jamaat kitchen. Amidst the bubbling pots, aromatic spices, and generous servings, their quiet love for cooking started blooming.</p>
+          </div>
+        </div>
+        <div class="blog-card">
+          <img src="/images/image5.png" alt="Latest 1">
+          <div class="blog-card-details">
+            <h3>Embracing Shift-Left Testing with Local Preview</h3>
+            <p>At Zomato, we develop and deliver fast, necessitating fast feedback loops. However, in a world of hundreds of microservices, testing the end-to-end flow can become time-consuming. To overcome this, we introduced Local Preview.</p>
+          </div>
+        </div>
+        <div class="blog-card">
+          <img src="/images/image6.png" alt="Latest 1">
+          <div class="blog-card-details">
+            <h3>The Green Sourcing Effect and the Pollution Paradox</h3>
+            <p>The paper’s central finding is that international trade, through what is called the “green sourcing effect,” has led to a reduction in global GHG emissions—by 0.9–2.2% annually from 2004 to 2021. This happens because high-income countries (HICs) – such as Germany, Canada.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="homepage-section">
+      <h2 class="section-headline">Trending</h2>
+      <div class="blog-list trending-posts">
+        <div class="blog-card">
+          <img src="/images/image7.png" alt="Trending 1">
+          <div class="blog-card-details">
+            <h3>Why AI-ready data?</h3>
+            <p>AI, particularly large language models (LLMs), is completely transforming the way people interact with data. Data users at all levels of experience and expertise—from first-timers to power users—are now able to pose complex questions in natural language to chatbots, to which they expect to promptly find, interpret, and present data-driven insights packaged as pithy, accurate responses.</p>
+          </div>
+        </div>
+        <div class="blog-card">
+          <img src="/images/image8.png" alt="Trending 1">
+          <div class="blog-card-details">
+            <h3>From farm to fork: boosting food security by fixing border bottlenecks</h3>
+            <p>Imagine a truckload of fresh mangoes grown by smallholder farmers in Sri Lanka. The fruit is ripe, fragrant, and ready for export. But instead of heading straight to market, it sits at the border waiting for inspections, test results, and paper certifications. Hours turn into days. </p>
+          </div>
+        </div>
+        <div class="blog-card">
+          <img src="/images/image9.png" alt="Trending 1">
+          <div class="blog-card-details">
+            <h3>Risks and challenges in global agricultural markets</h3>
+            <p>Agricultural commodity prices continued their downward trend in the second quarter of 2025, with the World Bank’s agricultural price index dropping nearly 7 percent since the start of the year. Food and raw material prices within the index fell by 7 and 1 percent, respectively, while beverage prices fell by 13 percent.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <%- include('footer') %>
+</body>
+</html>

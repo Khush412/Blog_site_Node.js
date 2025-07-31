@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Post – THE DAILY DAIRY</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <%- include('header') %>
+  <div class="container">
+    <h2 class="blog-main-title">Edit Your Post</h2>
+    <form action="/edit/<%= id %>" method="POST" class="post-form">
+      <input type="text" name="title" value="<%= post.title %>" required>
+      <textarea name="content" rows="4" required><%= post.content %></textarea>
+      <button type="submit">Update</button>
+      <a href="/blog" class="cancel-link">Cancel</a>
+    </form>
+  </div>
+  <%- include('footer') %>
+</body>
+</html>

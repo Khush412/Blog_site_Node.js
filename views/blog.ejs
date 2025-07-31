@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>THE DAILY DAIRY – Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <%- include('header', { activePage: 'blog' }) %>
+  <main class="blog-main-content">
+    <section class="container blog-container">
+      <h2 class="blog-main-title">Dairy Blog Posts</h2>
+
+      <!-- Post Creation Form -->
+      <form action="/post" method="POST" class="post-form">
+        <input type="text" name="title" placeholder="Post Title" required>
+        <textarea name="content" rows="4" placeholder="Write your post..." required></textarea>
+        <button type="submit">Create Post</button>
+      </form>
+      </div>
+    </section>
+    <section class="container published-section">
+      <h3 class="published-section-title">Your Published Blogs</h3>
+      <div class="published-blogs-list">
+        <% if (posts.length === 0) { %>
+          <p class="empty-msg">You have not published any blogs yet.</p>
+        <% } else { %>
+          <% posts.forEach((post, idx) => { %>
+            <div class="published-blog-card">
+              <h4 class="published-title"><%= post.title %></h4>
+              <p class="published-excerpt"><%= post.content.length > 100 ? post.content.substring(0, 100) + '...' : post.content %></p>
+              <div class="published-actions">
+                <a href="/edit/<%= idx %>" class="edit-btn-sm">Edit</a>
+                <form action="/delete/<%= idx %>" method="POST" class="inline-form">
+                  <button type="submit" class="delete-btn-sm">Delete</button>
+                </form>
+              </div>
+            </div>
+          <% }) %>
+        <% } %>
+      </div>
+    </section>
+  </main>
+  <%- include('footer') %>
+</body>
+</html>

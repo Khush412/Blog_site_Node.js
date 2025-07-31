@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us – THE DAILY DAIRY</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <%- include('header', { activePage: 'contact' }) %>
+  <main class="contact-content">
+    <section class="contact-hero">
+      <h2>Get in Touch</h2>
+      <p>Have a suggestion, partnership idea, or just want to say hi? Fill out the form—our team reads every message!</p>
+    </section>
+    <form class="contact-form">
+      <div>
+        <label for="name">Name</label>
+        <input id="name" name="name" required placeholder="Full Name" type="text" autocomplete="off" />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" name="email" required placeholder="example@dairy.com" type="email" autocomplete="off" />
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Write your message..."></textarea>
+      </div>
+      <button type="submit" disabled style="opacity: 0.7; cursor: default;">Send</button>
+      <div class="contact-note">
+        <p style="color:#99a;"> Messages would be sent to the editors at THE DAILY DAIRY.</p>
+      </div>
+    </form>
+    <div class="contact-info">
+      <p>
+        Or email us: <a href="mailto:team@thedailydairy.com">team@thedailydairy.com</a>
+      </p>
+      <p style="font-size:0.97em;color:#799;">Follow us on 
+        <a href="#">Instagram</a>, 
+        <a href="#">X/Twitter</a>, and 
+        <a href="#">LinkedIn</a>
+      </p>
+    </div>
+  </main>
+  <%- include('footer') %>
+</body>
+</html>

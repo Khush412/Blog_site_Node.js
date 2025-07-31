@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login – THE DAILY DAIRY</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <%- include('header', { activePage: 'login' }) %>
+  <main class="login-wrapper-bg">
+    <section class="login-auth-card">
+      <div class="login-auth-logo">THE DAILY DAIRY</div>
+      <h2 class="login-auth-title">Sign In to Your Account</h2>
+      <form class="login-auth-form" autocomplete="off">
+        <div class="form-group">
+          <label for="login-email">Email</label>
+          <input id="login-email" type="email" placeholder="you@example.com" required autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input id="login-password" type="password" placeholder="Password" required autocomplete="off">
+        </div>
+        <button type="submit" disabled title="Demo only">Log In</button>
+      </form>
+      <div class="login-auth-extra">
+        <span>Not a member?</span>
+        <a href="/register">Register</a>
+      </div>
+    </section>
+  </main>
+  <%- include('footer') %>
+</body>
+</html>
